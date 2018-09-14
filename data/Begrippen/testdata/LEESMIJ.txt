@@ -1,0 +1,6 @@
+- Start upload via upload-termen.bat
+
+  Deze werkt voor de lokale installatie en zorgt dat alle begrippen worden vervangen
+
+- aquo-termen.rdf.ttl is de meest recente verwerkende versie
+- De versie met een datum is een versie zoals aangeleverd

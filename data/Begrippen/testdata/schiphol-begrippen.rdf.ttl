@@ -1,0 +1,64 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix schiphol: <http://standaard.schiphol.nl/def/schiphol#>.
+@prefix example:    <https://raw.githubusercontent.com/bp4mc2/bp4mc2/master/catalogusdata/BAG/Afbeeldingen/>.
+
+<http://standaard.schiphol.nl/id/begrip/00001> a skos:Concept;
+  rdfs:label "EDWH";
+  skos:prefLabel "Test begrip 1";
+  skos:notation "00001Test";
+  dc:source "Ordina";
+  skos:definition "EDWH staat voor Eterprise Data Warehouse";
+  skos:narrower <http://standaard.schiphol.nl/id/begrip/00002>;
+  #skosthes:broaderPartitive <http://standaard.schiphol.nl/id/begrip/00002>;
+  dcterms:created "2018-09-14T09:11:21Z"^^xsd:dateTime;
+  dcterms:modified "2018-09-14T09:11:21Z"^^xsd:dateTime;
+  #dcterms:subject <http://standaard.schiphol.nl/id/category/8>;
+  #dcterms:subject <http://standaard.schiphol.nl/id/category/1000>;
+  #skos:related <http://standaard.schiphol.nl/id/begrip/00002>;
+  skos:example example:EDWH.png;
+  skos:note "skos :note";
+  rdfs:comment "rdfs:comment";
+  skos:definition "text 2: skos:definition";
+  skos:altLabel "german1"@de;
+  skos:altLabel "german2"@de;
+  skos:altLabel "english"@en;
+  skos:altLabel "flamish"@fl;
+  skos:altLabel "dutch synoniem"@nl;
+  adms:status "Geldig"@nl;
+  #skos:relatedMatch <http://data.gwsw.nl/Gemaal>;
+  schiphol:abbreviation "afkorting / schiphol:abbreviation"@nl;
+  
+.
+<http://standaard.schiphol.nl/id/begrip/00002> a skos:Concept;
+  rdfs:label "CDW";
+  skos:prefLabel "CIS (Centraal informatie systeem) Data Warehouse";
+  skos:notation "00002Test";
+  dc:source "Ordina";
+  skos:definition "Een begrip om verschillende functionaliteit te testen";
+  skos:broader <http://standaard.schiphol.nl/id/begrip/00001>;
+  #skosthes:narrowerPartitive <http://standaard.schiphol.nl/id/begrip/00001>;
+  skos:related <http://standaard.schiphol.nl/id/begrip/00001>;
+  dcterms:created "2018-04-16T09:11:21Z"^^xsd:dateTime;
+  dcterms:modified "2018-04-17T09:11:21Z"^^xsd:dateTime;
+  dcterms:subject <http://standaard.schiphol.nl/id/category/8>;
+  dcterms:subject <http://standaard.schiphol.nl/id/category/1000>;
+  skos:example example:CIS.png;  
+  skos:note "skos :note";
+  rdfs:comment "rdfs:comment";
+  skos:definition "skos:definition";
+  skos:altLabel "german1"@de;
+  skos:altLabel "german2"@de;
+  skos:altLabel "english"@en;
+  skos:altLabel "flamish"@fl;
+  skos:altLabel "dutch synoniem"@nl;
+  adms:status "Geldig"@nl;
+  #skos:relatedMatch <http://data.gwsw.nl/Gemaal>;
+  schiphol:abbreviation "afkorting / schiphol:abbreviation"@nl;
+  
+.

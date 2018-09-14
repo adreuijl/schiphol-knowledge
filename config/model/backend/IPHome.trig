@@ -1,0 +1,120 @@
+GRAPH config:Theatre {
+
+  config:MenuData a elmo:InformationProduct;
+    elmo:backend config:LocalBackend;
+    elmo:query """
+      prefix elmo1: <http://bp4mc2.org/elmo/def#>
+      prefix xhtml: <http://www.w3.org/1999/xhtml/vocab#>
+      prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+      CONSTRUCT {
+        [ xhtml:link "http://www.schiphol.nl/";
+          rdfs:label "Schiphol";
+          xhtml:search "search";
+          elmo1:data [
+            elmo1:index "1"; rdfs:label "Begrippen";
+            elmo1:data [elmo1:index "1"; rdfs:label "Begrippen"; xhtml:link "%{dotwebstack.config.schipholroot}/begrippen"];
+            elmo1:data [elmo1:index "3"; rdfs:label "Informatie"; xhtml:link "http://www.schiphol.nl/"]
+          ];
+        ]
+      }
+      WHERE {}
+    """;
+  .
+
+  config:FooterData a elmo:InformationProduct;
+    elmo:backend config:LocalBackend;
+    elmo:query """
+      prefix elmo1: <http://bp4mc2.org/elmo/def#>
+      CONSTRUCT {
+        [] elmo1:html '''<div class="row">
+          <div class="col-sm-4">
+            <h4>Links</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://github.com/architolk/linked-data-theatre">Github codebase</a>
+              </li>
+              <li>
+                <a href="https://github.com/architolk/linked-data-theatre/wiki">Wiki documentation</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <h4>configuration</h4>
+            <p>Dit is een concept omgeving voor het bijhouden, linken en delen van kennis binnen schiphol, kijk op:<a href="http://www.schiphol.nl"> </a>
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <h4>License</h4>
+            <p>GPL 3.0 / CC-BY-SA</p>
+          </div>
+        </div>'''
+      }
+      WHERE {}
+    """;
+  .
+
+  #<p>Deze configuratie is een eerste opzet voor de gegevens catalogus van het InformatieHuis Water (IHW) op basis van de dotwebstack applicatie.</p>
+  #Oude tekst van footer
+
+
+  config:ImageHeader a elmo:InformationProduct;
+    elmo:backend config:LocalBackend;
+    elmo:query """
+    prefix elmo1: <http://bp4mc2.org/elmo/def#>
+      CONSTRUCT {
+
+      [] elmo1:html '''
+            <div class="text-left">
+            <h5> <a href="https://www.schiphol.nl">
+            <img src="https://raw.githubusercontent.com/bp4mc2/bp4mc2/master/catalogusdata/BAG/Afbeeldingen/SchipholGroup_logo_klein.png" alt="HTML5 Icon">
+               </img>
+               </a>
+            </h5>
+            </div>
+              '''
+      }
+      WHERE {}
+    """
+  .
+
+  config:ConceptHeader a elmo:InformationProduct;
+    elmo:backend config:LocalBackend;
+    elmo:query """
+    prefix elmo1: <http://bp4mc2.org/elmo/def#>
+      CONSTRUCT {
+
+      [] elmo1:html '''
+            <div class="text-left">
+            <h5> <a href="https://www.schiphol.nl">
+              </a>
+            <img src="https://raw.githubusercontent.com/bp4mc2/bp4mc2/master/catalogusdata/BAG/Afbeeldingen/SchipholGroup_logo_klein.png" alt="HTML5 Icon">
+               </img>
+            </h5>
+            </div>
+              '''
+      }
+      WHERE {}
+    """
+  .
+
+  #[xhtml:link "%{dotwebstack.config.schipholroot}/begrippen?format=xml"] rdfs:label "XML export";
+
+  config:ExportIndexData a elmo:InformationProduct;
+    elmo:backend config:LocalBackend;
+    elmo:query """
+      prefix elmo1: <http://bp4mc2.org/elmo/def#>
+      prefix xhtml: <http://www.w3.org/1999/xhtml/vocab#>
+      prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      CONSTRUCT {
+      [xhtml:link ""]
+       rdfs:label "xml|csv";
+       rdf:value "xml|csv";
+       elmo1:name "format"
+      }
+     WHERE {}
+    """
+  .
+
+
+}

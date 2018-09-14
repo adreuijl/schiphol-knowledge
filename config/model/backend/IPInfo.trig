@@ -1,0 +1,50 @@
+GRAPH config:Theatre {
+   config:InfoPaginaLocData a elmo:InformationProduct; 
+     elmo:backend config:LocalBackend; 
+     elmo:query """ 
+       PREFIX elmo1: <http://bp4mc2.org/elmo/def#> 
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       CONSTRUCT { 
+         [] rdfs:label "Schiphol"; 
+           elmo1:html ''' 
+             <h1>Schiphol knowledge</h1>
+              <p>Schiphol knowledge is een tool waarmee u toegang hebt tot ruim xxx termen en definities. blabblablaat</p>
+            <h2>Gemakkelijk zoeken </h2>
+              <p>U kunt gemakkelijk zoeken op verschillende termen. Zo wordt er niet alleen
+              naar de exacte term gezocht, maar ook gekeken of de zoekterm deel van het
+              resultaat is.  <a title="Schiphol-website" target="_blank" href="http://www.schiphol.nl">Schiphol-website.</a>
+              </p>
+           ''' 
+         . 
+       } 
+       WHERE {} 
+     """ 
+   . 
+
+  config:InfoPaginaDsData a elmo:InformationProduct; 
+     elmo:backend config:LocalBackend; 
+     elmo:query """ 
+       PREFIX elmo1: <http://bp4mc2.org/elmo/def#> 
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       CONSTRUCT { 
+         [] rdfs:label "Schiphol"; 
+           elmo1:html ''' 
+            <h1>Schiphol</h1>
+              <p> blablablaat </p>          
+           <h2>Domeintabellen </h2>
+               <p>Domeintabellen zijn vooraf gedefinieerde lijsten met mogelijke waarden die
+                gebruikt kunnen worden in informatiesystemen en uitwisselbestanden. Door gebruik
+                te maken van de waarden uit deze domeintabellen hanteert u de afgesproken
+                schrijfwijze voor het gegevenselement en kunnen gegevens uit verschillende
+                databases eenvoudig gecombineerd worden.</p>
+           <h2>Met achtergrondinformatie </h2>
+                <p>blablablablaat</p>
+           <h2>En een webservice </h2>
+                <p>blablablaat</p>
+           ''' 
+         . 
+       } 
+       WHERE {} 
+     """ 
+   . 
+}

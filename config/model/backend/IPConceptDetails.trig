@@ -1,0 +1,55 @@
+GRAPH config:Theatre {
+
+  config:ConceptDetailData a elmo:InformationProduct;
+    elmo:requiredParameter config:ConceptTabelParameter;
+    elmo:optionalParameter elmo:SubjectParameter;
+    elmo:backend config:LocalBackend;
+    elmo:query """
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      PREFIX dct: <http://purl.org/dc/terms/>
+      PREFIX schiphol: <http://standaard.schiphol.nl/def/schiphol#>
+      PREFIX owl:<http://www.w3.org/2002/07/owl#>
+
+      CONSTRUCT {
+        ?subject ?p ?o;
+          rdfs:label ?titellabel.
+        ?o rdfs:label ?olabel.
+        ?subject owl:sameAs ?domeinwaarde.
+        ?subject dct:subject ?categorie.
+        ?categorie rdfs:label ?categorie_label.
+        ?subject schiphol:englishLabel ?englishLabel.
+        ?subject schiphol:germanLabel ?germanLabel.
+        ?subject schiphol:flemmishLabel ?flemmishLabel.
+        ?subject schiphol:dutchLabel ?dutchLabel.
+      }
+      WHERE {
+        GRAPH <http://standaard.schiphol.nl/id/dataset/begrippen> {
+          ?subject ?p ?o;
+            rdfs:label ?slabel.
+          OPTIONAL {?o rdfs:label ?olabel}
+  		    OPTIONAL {?subject skos:altLabel ?englishLabel FILTER (lang(?englishLabel)="en")}
+          OPTIONAL {?subject skos:altLabel ?germanLabel FILTER (lang(?germanLabel)="de")}
+          OPTIONAL {?subject skos:altLabel ?flemmishLabel FILTER (lang(?flemmishLabel)="fl")}
+          OPTIONAL {?subject skos:altLabel ?dutchLabel FILTER (lang(?dutchLabel)="nl")}
+          MINUS {?subject rdfs:label ?o}
+        }
+        OPTIONAL {
+          GRAPH <http://standaard.schiphol.nl/id/dataset/begrippen> {
+            ?subject dct:subject ?categorie
+          }
+          GRAPH <http://standaard.schiphol.nl/id/dataset/categorieen> {
+            ?categorie rdfs:label ?categorie_label
+          }
+        }
+        OPTIONAL {
+          GRAPH <http://standaard.schiphol.nl/id/dataset/links> {
+            ?subject owl:sameAs ?domeinwaarde
+          }
+         }
+        BIND(CONCAT("Begrip: ", ?slabel) AS ?titellabel)
+      }
+    """
+  .
+
+}

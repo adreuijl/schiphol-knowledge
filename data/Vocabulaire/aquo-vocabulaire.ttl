@@ -1,0 +1,62 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix aquo: <http://standaard.aquo.nl/def/aquo#>.
+
+#Imported
+skos:altLabel a owl:DatatypeProperty;
+  rdfs:label "altLabel"@en;
+.
+
+<http://standaard.aquo.nl/def/aquo#> a owl:Ontology;
+  rdfs:label "Aquo vocabulaire"@nl;
+.
+
+aquo:abbreviation a owl:DatatypeProperty;
+  rdfs:subPropertyOf skos:altLabel;
+  rdfs:label "abbreviation"@en;
+  rdfs:label "afkorting"@nl;
+.
+aquo:englishLabel a owl:DatatypeProperty;
+  rdfs:subPropertyOf skos:altLabel;
+  rdfs:label "english label"@en;
+  rdfs:label "engels label"@nl;
+.
+aquo:germanLabel a owl:DatatypeProperty;
+  rdfs:subPropertyOf skos:altLabel;
+  rdfs:label "german label"@en;
+  rdfs:label "duits label"@nl;
+.
+aquo:flemishLabel a owl:DatatypeProperty;
+  rdfs:subPropertyOf skos:altLabel;
+  rdfs:label "flemish label"@en;
+  rdfs:label "vlaams label"@nl;
+.
+aquo:status a owl:DatatypeProperty;
+  rdfs:label "status"@nl;
+  rdfs:comment "De status van een onderdeel van een domeintabel"
+.
+aquo:Omschrijving a owl:DatatypeProperty;
+  rdfs:label "omschrijving"@nl;
+.
+aquo:Cijfercode a owl:DatatypeProperty;
+  rdfs:label "cijfercode"@nl;
+.
+aquo:Groep a owl:DatatypeProperty;
+  rdfs:label "groep"@nl;
+.
+
+
+
+# aquo:status
+# aquo:Omschrijving
+# aquo:Cijfercode
+# aquo:Groep
+
+
+
