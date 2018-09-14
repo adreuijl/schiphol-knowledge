@@ -21,18 +21,18 @@
   #dcterms:subject <http://standaard.schiphol.nl/id/category/8>;
   #dcterms:subject <http://standaard.schiphol.nl/id/category/1000>;
   #skos:related <http://standaard.schiphol.nl/id/begrip/00002>;
-  skos:example example:EDWH.png;
+  skos:example example:EDWH_png.png;
   skos:note "skos :note";
   rdfs:comment "rdfs:comment";
   skos:definition "text 2: skos:definition";
-  skos:altLabel "german1"@de;
+  skos:altLabel "Jahwohl, Deutsche label"@de;
   skos:altLabel "german2"@de;
   skos:altLabel "english"@en;
-  skos:altLabel "flamish"@fl;
+  skos:altLabel "EDWHHHH"@fl;
   skos:altLabel "dutch synoniem"@nl;
   adms:status "Geldig"@nl;
   #skos:relatedMatch <http://data.gwsw.nl/Gemaal>;
-  schiphol:abbreviation "afkorting / schiphol:abbreviation"@nl;
+  schiphol:abbreviation "EDWH"@nl;
   
 .
 <http://standaard.schiphol.nl/id/begrip/00002> a skos:Concept;
@@ -40,7 +40,7 @@
   skos:prefLabel "CIS (Centraal informatie systeem) Data Warehouse";
   skos:notation "00002Test";
   dc:source "Ordina";
-  skos:definition "Een begrip om verschillende functionaliteit te testen";
+  skos:definition "Centraal Data Warehouse";
   skos:broader <http://standaard.schiphol.nl/id/begrip/00001>;
   #skosthes:narrowerPartitive <http://standaard.schiphol.nl/id/begrip/00001>;
   skos:related <http://standaard.schiphol.nl/id/begrip/00001>;
@@ -48,7 +48,7 @@
   dcterms:modified "2018-04-17T09:11:21Z"^^xsd:dateTime;
   dcterms:subject <http://standaard.schiphol.nl/id/category/8>;
   dcterms:subject <http://standaard.schiphol.nl/id/category/1000>;
-  skos:example example:CIS.png;  
+  skos:example example:CIS_png.png;  
   skos:note "skos :note";
   rdfs:comment "rdfs:comment";
   skos:definition "skos:definition";
@@ -59,6 +59,6 @@
   skos:altLabel "dutch synoniem"@nl;
   adms:status "Geldig"@nl;
   #skos:relatedMatch <http://data.gwsw.nl/Gemaal>;
-  schiphol:abbreviation "afkorting / schiphol:abbreviation"@nl;
+  schiphol:abbreviation "CDW"@nl;
   
 .
