@@ -1,0 +1,27 @@
+GRAPH config:Theatre {
+ 
+ config:WikipediaEndpoint a elmo:Endpoint;
+  elmo:pathPattern "/wikipedia";
+  elmo:stage config:Stage;
+  elmo:getRepresentation config:Wikipedia
+  .
+  
+  config:Wikipedia a elmo:Representation;
+    #elmo:contains config:CategorieTitel;
+    elmo:appearance config:WikipediaAppearance;
+    elmo:stage config:Stage;
+    elmo:contains config:Menu;
+    elmo:contains config:Footer;
+    elmo:informationProduct config:WikipediaData;
+  .
+  
+  config:WikipediaAppearance a elmo:Appearance;
+	elmo:index 2;
+	elmo:fragment [
+	  elmo:appliesTo rdf:type;
+    elmo:appearance elmo:HiddenAppearance;
+	  rdfs:label "Term"@nl;
+	];
+
+ 
+}

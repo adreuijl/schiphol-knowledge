@@ -29,7 +29,7 @@ GRAPH config:Theatre {
   config:UpdateBackend a elmo:SparqlBackend;
     elmo:endpoint "http://localhost:3030/schiphol/update"^^xsd:anyURI
   .
-  config:GwswBackend a elmo:SparqlBackend;
-   elmo:endpoint "http://sparql.gwsw.nl/repositories/GWSW_Totaal"^^xsd:anyURI
+  config:Dbpedia a elmo:SparqlBackend;
+   elmo:endpoint "https://dbpedia.org/sparql"^^xsd:anyURI
   .
 }
