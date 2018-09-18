@@ -1,0 +1,6 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:schiphol="http://standaard.schiphol.nl/def/schiphol#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+<schiphol:Categorie rdf:about="http://standaard.schiphol.nl/id/category/1"><rdfs:label>Databases</rdfs:label></schiphol:Categorie>
+<schiphol:Categorie rdf:about="http://standaard.schiphol.nl/id/category/2"><rdfs:label>OBIEE</rdfs:label></schiphol:Categorie>
+<schiphol:Categorie rdf:about="http://standaard.schiphol.nl/id/category/3"><rdfs:label>testcategorie </rdfs:label><rdfs:comment>dit is een voorbeeld omschrijving van de categorie</rdfs:comment></schiphol:Categorie>
+
+</rdf:RDF>

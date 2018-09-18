@@ -6,13 +6,15 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix adms: <http://www.w3.org/ns/adms#>.
 @prefix schiphol: <http://standaard.schiphol.nl/def/schiphol#>.
-@prefix example:    <https://raw.githubusercontent.com/bp4mc2/bp4mc2/master/catalogusdata/BAG/Afbeeldingen/>.
+@prefix example:    <https://raw.githubusercontent.com/adreuijl/schiphol-knowledge/master/data/Afbeeldingen/>.
+
 
 <http://standaard.schiphol.nl/id/begrip/00001> a skos:Concept;
   rdfs:label "EDWH";
   skos:prefLabel "EDWH";
   skos:notation "00001Test";
   dc:source "Ordina";
+  dcterms:subject <http://standaard.schiphol.nl/id/category/2>;
   skos:definition "EDWH staat voor Eterprise Data Warehouse";
   skos:narrower <http://standaard.schiphol.nl/id/begrip/00002>;
   #skosthes:broaderPartitive <http://standaard.schiphol.nl/id/begrip/00002>;
@@ -46,8 +48,8 @@
   skos:related <http://standaard.schiphol.nl/id/begrip/00001>;
   dcterms:created "2018-04-16T09:11:21Z"^^xsd:dateTime;
   dcterms:modified "2018-04-17T09:11:21Z"^^xsd:dateTime;
-  dcterms:subject <http://standaard.schiphol.nl/id/category/8>;
-  dcterms:subject <http://standaard.schiphol.nl/id/category/1000>;
+  dcterms:subject <http://standaard.schiphol.nl/id/category/1>;
+  dcterms:subject <http://standaard.schiphol.nl/id/category/3>;
   skos:example example:CIS_png.png;  
   skos:note "skos :note";
   rdfs:comment "rdfs:comment";

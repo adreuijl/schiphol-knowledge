@@ -12,8 +12,12 @@ GRAPH config:Theatre {
           xhtml:search "search";
           elmo1:data [
             elmo1:index "1"; rdfs:label "Begrippen";
-            elmo1:data [elmo1:index "1"; rdfs:label "Begrippen"; xhtml:link "%{dotwebstack.config.schipholroot}/begrippen"];
-            elmo1:data [elmo1:index "3"; rdfs:label "Informatie"; xhtml:link "http://www.schiphol.nl/"]
+            elmo1:data [elmo1:index "1"; rdfs:label "Begrippen"; xhtml:link "/begrippen"];
+            elmo1:data [elmo1:index "2"; rdfs:label "Informatie"; xhtml:link "http://www.schiphol.nl/"];
+          ];
+          elmo1:data [
+            elmo1:index "1"; rdfs:label "Categorieen";
+            elmo1:data [elmo1:index "1"; rdfs:label "Categorieen"; xhtml:link "/categorieen"];
           ];
         ]
       }
@@ -66,7 +70,7 @@ GRAPH config:Theatre {
       [] elmo1:html '''
             <div class="text-left">
             <h5> <a href="https://www.schiphol.nl">
-            <img src="https://raw.githubusercontent.com/bp4mc2/bp4mc2/master/catalogusdata/BAG/Afbeeldingen/SchipholGroup_logo_klein.png" alt="HTML5 Icon">
+            <img src="https://raw.githubusercontent.com/adreuijl/schiphol-knowledge/master/data/Afbeeldingen/SchipholGroup_logo_klein.png" alt="HTML5 Icon">
                </img>
                </a>
             </h5>
@@ -87,7 +91,7 @@ GRAPH config:Theatre {
             <div class="text-left">
             <h5> <a href="https://www.schiphol.nl">
               </a>
-            <img src="https://raw.githubusercontent.com/bp4mc2/bp4mc2/master/catalogusdata/BAG/Afbeeldingen/SchipholGroup_logo_klein.png" alt="HTML5 Icon">
+            <img src="https://raw.githubusercontent.com/adreuijl/schiphol-knowledge/master/data/Afbeeldingen/SchipholGroup_logo_klein.png" alt="HTML5 Icon">
                </img>
             </h5>
             </div>
