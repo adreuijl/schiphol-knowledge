@@ -1,0 +1,2 @@
+curl -X PUT -T empty-graph.xml http://localhost:8890/sparql-graph-crud?graph-uri=http://localhost:8080/catalogus/images
+curl -X POST --header "Content-Type: video/mp4" -T Demo.mp4 http://localhost:8890/sparql-graph-crud?graph-uri=http://localhost:8080/catalogus/images
